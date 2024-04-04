@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" media="(max-width: 420px)" href="css/mobile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div style="grid-area: a1">
+        Istat
+        <img src="images/wifi.png">
+        </div>
+        <div style="grid-area: a2">
+            <button id="burger" href="javascript:void(0)" onclick="myFunction()">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="67" height="67">
+                    <line x1="14" y1="27" x2="38" y2="27" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="14" y1="35" x2="38" y2="35" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="14" y1="43" x2="38" y2="43" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+<div style="height: auto;">
+    <div class="topnav">
+        <div id="myLinks">
+            <a href="#">Акции</a>
+            <a href="#">Оплата</a>
+            <a href="#">Доставка</a>
+            <a href="#">О Нас</a>
+            <a href="#">Контакты</a>
+        </div>
+    </div>
+</div>
+
+    <header>
+        <div id="welcome-text">
+            Откройте для себя новейшие и самые</br>
+            популярные устройства
+        </div>
+        <div id="welcome-images">
+            <img style="grid-area: a1;" src="images/woman.jpg">
+            <img style="grid-area: a2;" src="images/airpods.jpg">
+        </div>
+    </header>
+
+    <div id="logos">
+        <img src="images/logos/apple-logo.png">
+        <img src="images/logos/gopro.png">
+        <img src="images/logos/sony.png">
+        <img src="images/logos/logitech.png">
+        <img src="images/logos/samsung.png">
+        <img src="images/logos/xiaomi.png">
+    </div>
+
+    <div id="items">
+        <span>Хиты</span>
+        <span>Продаж</span>
+        <div class="slider single-item"></div>
+    </div>
+
+    <div id="principles">
+        <h2>Наши принципы</h2>
+        <div class="item-principles grey">
+            <img src="images/delivery.png"/>
+            <h3>Доставка</h3>
+            Бесплатная доставка</br>
+            по Беларуси: от 1 дня
+        </div>
+        <div class="item-principles">
+            <img src="images/credit-cards-payment.png"/>
+            <h3>Удобная оплата</h3>
+            Наличная и</br>
+            безналичная оплата
+        </div>
+        <div class="item-principles grey">
+            <img src="images/bank.png"/>
+            <h3>Низкие цены</h3>
+            Приемлемые цены для</br>
+            наших покупателей
+        </div>
+        <div class="item-principles">
+            <img src="images/medal.png"/>
+            <h3>Сертифицированный</br>
+                товар</h3>
+                Гарантия оригинальной</br>
+                продукции
+        </div>
+    </div>
+
+    <div id="FAQ">
+        <h1>FAQs</h1>
+        <h4>Найдите ответы на общие вопросы о заказе,</br>доставке и возвратах.</h4>
+        <div class="accordion">
+            <input id="toggle1" type="radio" class="accordion-toggle" name="toggle" />
+            <label for="toggle1">Как я могу заказать?</label>
+            <section>
+              <p>Чтобы сделать заказ, просто просмотрите наш каталог продуктов, выберите нужные элементы и приступайте к оформлению заказа. 
+                Следуйте инструкциям, чтобы предоставить информацию о доставке и оплате, а затем подтвердить заказ.</p>
+            </section>
+          </div>
+          <div class="accordion">
+            <input id="toggle2" type="radio" class="accordion-toggle" name="toggle" />
+            <label for="toggle2">Время доставки</label>
+            <section>
+              <p>Время доставки может варьироваться в зависимости от вашего местоположения и выбранного способа доставки. 
+                Мы стремимся обрабатывать и отправлять заказы как можно быстрее, и вы можете отслеживать ход вашего груза, используя предоставленный номер отслеживания.</p>
+            </section>
+          </div>
+          <div class="accordion">
+            <input id="toggle3" type="radio" class="accordion-toggle" name="toggle" />
+            <label for="toggle3">Политика возврата</label>
+            <section>
+              <p>Мы принимаем возвраты в течение 30 дней с момента покупки для большинства предметов. 
+                Пожалуйста, ознакомьтесь с нашей политикой возврата для получения подробных инструкций о том, 
+                как начать возврат и получить возврат или обмен.</p>
+            </section>
+          </div>
+          <div class="accordion">
+            <input id="toggle4" type="radio" class="accordion-toggle" name="toggle" />
+            <label for="toggle4">Отмена заказа</label>
+            <section>
+              <p>Если вам нужно отменить заказ, пожалуйста, свяжитесь с нашей службой поддержки как можно скорее.
+                Мы сделаем все возможное, чтобы удовлетворить ваш запрос, если заказ еще не был отправлен.</p>
+            </section>
+          </div>
+    </div>
+
+    <div id="info">
+        <h2>Остались вопросы?</h2>
+        <h4>Наши специалисты помогут вам!</h4>
+        <a href="#" class="button button2">
+            Связаться
+        </a>
+        <iframe id = map src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.2687522523634!2d27.559743899999994!3d53.89142700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfdb12398d2d%3A0xda87e12c7d16133f!2z0JHQtdC70L7RgNGD0YHRgdC60LjQuSDQs9C-0YHRg9C00LDRgNGB0YLQstC10L3QvdGL0Lkg0YLQtdGF0L3QvtC70L7Qs9C40YfQtdGB0LrQuNC5INGD0L3QuNCy0LXRgNGB0LjRgtC10YI!5e0!3m2!1sru!2sby!4v1712042552955!5m2!1sru!2sby" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div id="contacts">
+        <h2 style="grid-area: cont;">Контакты</h2>
+        <img src="images/mail.png" style="grid-area: b1;">
+        <h4 style="grid-area: b2;">statkog@gmail.com</h4>
+        <img src="images/location.png" style="grid-area: b3">
+        <h4 style="grid-area: b4;">Хорошая улица, 5</h4>
+        <img src="images/telephone.png" style="grid-area: b5">
+        <h4 style="grid-area: b6;">+375 29 123-45-67</h4>
+    </div>
+
+    <div id="mail">
+        <h3>Будь в курсе событий в</br>мире технологий</h3>
+        <h4>Подпишитесь на нашу рассылку</h4>
+        <form>
+            <input type="email" placeholder="E-mail адрес" id="inputField">
+            <button type="reset" id="button">Подписаться</button>
+        </form>
+    </div>
+
+    <footer>
+        <div style="grid-area: a1">
+            Istat
+            <img src="images/wifi.png">
+            </div>
+            <div style="grid-area: a2">
+            </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myLinks");
+         if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+$main-color: #4800E2;
+$border-color: #303039;
+
+@font-face{
+    font-family: "Museo";
+    src: url("Museo.ttf");
+}
+
+body{
+    margin: 0;
+}
+
+nav{
+    height: 67px;
+    border-bottom: 2px solid $border-color;
+    display: grid;
+}
+
+header{
+    height: 500px;
+}
+
+footer{
+    height: 67px;
+    border-top: 2px solid $border-color;
+    margin: auto;
+    clear: both;
+}

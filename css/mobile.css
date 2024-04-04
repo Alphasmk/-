@@ -1,0 +1,363 @@
+@font-face {
+  font-family: Museo;
+  src: url("fonts/Museo500.otf");
+}
+footer, body nav {
+  display: grid;
+  font-weight: 600;
+  font-size: 17px;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "a1 a2";
+  grid-gap: 0px;
+}
+footer div, body nav div {
+  letter-spacing: 1px;
+}
+footer div[style="grid-area: a1"], body nav div[style="grid-area: a1"] {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+#mail, #contacts, #info, #FAQ, #principles, .button, #items span, header #welcome-text {
+  font-size: 5vw;
+}
+@media (max-width: 220px) {
+  #mail, #contacts, #info, #FAQ, #principles, .button, #items span, header #welcome-text {
+    font-size: 11.08px;
+  }
+}
+@media (min-width: 335px) {
+  #mail, #contacts, #info, #FAQ, #principles, .button, #items span, header #welcome-text {
+    font-size: 16.72px;
+  }
+}
+
+body {
+  font-family: "Museo";
+  min-width: 200px;
+}
+body nav div[style="grid-area: a2"] #burger {
+  background-color: white;
+  border: 0px;
+  height: 67px;
+  width: 67px;
+  float: right;
+}
+body nav div[style="grid-area: a2"] svg {
+  float: right;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #4800E2;
+  position: relative;
+}
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+img[src="images/wifi.png"] {
+  width: 22px;
+  margin-left: -5px;
+}
+
+header {
+  height: auto;
+}
+header #welcome-text {
+  padding-top: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+header #welcome-images {
+  margin-top: 20px;
+  max-height: 400px;
+  grid-template-rows: 50% 50%;
+}
+header #welcome-images img {
+  height: auto;
+  width: 270px;
+  border-radius: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen {
+  header #welcome-images img {
+    max-width: 80%;
+  }
+}
+
+#logos {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#logos img {
+  height: 40px;
+  margin: 2px;
+}
+
+#items {
+  margin-top: 30px;
+  text-align: center;
+}
+#items span {
+  background-color: #4800E2;
+  color: white;
+  display: inline;
+  white-space: pre-wrap;
+  padding: 3px 3px;
+  padding-left: 3px;
+  line-height: 160%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.45);
+}
+#items span:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: block;
+}
+@media screen {
+  #items span:first-child {
+    max-width: 30%;
+  }
+}
+#items span:nth-child(2) {
+  display: block;
+  border-radius: 5px;
+}
+@media screen {
+  #items span:nth-child(2) {
+    max-width: 40%;
+  }
+}
+#items img {
+  max-width: 100%;
+}
+
+.slider {
+  margin: 40px;
+}
+.slider .slick-prev,
+.slider .slick-next {
+  height: 40px;
+}
+.slider a {
+  text-decoration: none;
+  color: white;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  border: 3px solid #8650fa;
+  background-color: #4800E2;
+  border-radius: 10px;
+}
+@media screen {
+  .button {
+    max-width: 70%;
+  }
+}
+
+.button2 {
+  display: block;
+  color: #303039;
+  background-color: white;
+  border: 3px solid #303039;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.single-item {
+  border: 3px solid #4800E2;
+  border-radius: 15px;
+  padding: 8px;
+}
+.single-item img {
+  border-radius: 15px;
+}
+
+#principles {
+  text-align: center;
+}
+#principles h2 {
+  color: #303039;
+}
+
+.item-principles {
+  border-radius: 20px;
+  border: 2px solid #303039;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen {
+  .item-principles {
+    width: 70%;
+  }
+}
+.item-principles img {
+  width: 40px;
+}
+
+.grey {
+  background-color: #303039;
+  color: white;
+}
+
+#FAQ {
+  margin-top: 20px;
+}
+#FAQ h1, #FAQ h4 {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+#FAQ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#FAQ body {
+  margin: 10px;
+}
+#FAQ .accordion {
+  transform: translateZ(0);
+  background: white;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+#FAQ .accordion > .accordion-toggle {
+  display: none;
+  position: absolute;
+  opacity: 0;
+}
+#FAQ .accordion > label {
+  display: block;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background: white;
+  color: #303039;
+  font-weight: bold;
+  cursor: pointer;
+}
+#FAQ .accordion > label:after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid #4800E2;
+  border-top: 2px solid #4800E2;
+  transform: rotate(-135deg);
+  transition: 0.4s transform;
+}
+#FAQ .accordion > section {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.4s;
+}
+#FAQ .accordion > .accordion-toggle:checked ~ label:after {
+  transform: rotate(45deg);
+  top: 16px;
+}
+#FAQ .accordion > .accordion-toggle:checked ~ section {
+  height: 225px;
+}
+#FAQ .accordion > section p {
+  margin: 15px 0;
+  padding: 0 20px;
+}
+
+#info {
+  text-align: center;
+}
+
+#map {
+  border: 3px solid #303039;
+  max-width: 80%;
+  height: 250px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+#contacts {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 10% 30% 30% 30%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "cont cont" "b1 b2" "b3 b4" "b5 b6";
+  grid-gap: 5px;
+}
+#contacts img {
+  max-width: 25%;
+  margin-left: 25px;
+  margin-right: auto;
+  align-self: center;
+}
+#contacts h4 {
+  align-self: center;
+  margin-right: 0px;
+}
+
+#mail {
+  text-align: center;
+  height: auto;
+  padding: 15px;
+  border: 2px solid #4800E2;
+  border-radius: 20px;
+  margin: 25px 20px 20px 20px;
+}
+#mail input[type=email] {
+  font-family: "Museo";
+  display: inline-block;
+  height: 15px;
+  padding: 8px;
+  border: 3px solid #303039;
+  border-radius: 5px;
+  width: 50%;
+}
+#mail #button {
+  font-family: "Museo";
+  display: inline-block;
+  background-color: white;
+  padding: 8px;
+  border: none;
+  background-color: #4800E2;
+  color: white;
+  border-radius: 5px;
+}
+
+footer {
+  margin-top: 10px;
+}/*# sourceMappingURL=mobile.css.map */
