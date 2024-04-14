@@ -1,0 +1,35 @@
+body nav {
+  display: grid;
+  font-weight: 600;
+  font-size: 17px;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "a1 a2";
+  grid-gap: 0px;
+}
+body nav div {
+  letter-spacing: 1px;
+}
+body nav div[style="grid-area: a1"] {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+@font-face {
+  font-family: Museo;
+  src: url("fonts/Museo500.otf");
+}
+body {
+  font-family: "Museo";
+  min-width: 200px;
+}
+#burger-menu {
+  display: none;
+}
+
+#burger {
+  display: none;
+}
+
+img {
+  height: 20px;
+}/*# sourceMappingURL=tablet.css.map */

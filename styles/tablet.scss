@@ -1,0 +1,52 @@
+@use "sass:math";
+$main-color: #4800E2;
+$border-color: #303039;
+$border-radius: 20px;
+
+%nav-foot{
+    display: grid;
+        font-weight: 600;
+        font-size: 17px;
+        grid-template-columns: 60% 40%;
+        grid-template-areas:
+        "a1 a2";
+        grid-gap: 0px;
+        div{
+            letter-spacing: 1px;
+        }
+        div[style="grid-area: a1"]
+        {
+            padding-top: 20px;
+            padding-left: 30px;
+        }
+}
+
+@font-face{
+    font-family: Museo;
+    src:
+        url("fonts/Museo500.otf");
+}
+
+body{
+    font-family: "Museo";
+    min-width: 200px;
+    nav{
+       @extend %nav-foot;
+        div[style="grid-area: a2"]
+        {
+            
+        } 
+    }
+}
+
+#burger-menu{
+    display: none;
+}
+
+#burger{
+    display: none;
+}
+
+img{
+    height: 20px;
+}

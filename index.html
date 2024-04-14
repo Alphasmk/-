@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
     <link rel="stylesheet" type="text/css" media="(max-width: 420px)" href="css/mobile.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 421px) and (max-width: 1000px)" href="css/tablet.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -26,12 +27,12 @@
         </div>
     </nav>
 
-<div style="height: auto;">
+<div id="burger-menu" style="height: auto;">
     <div class="topnav">
         <div id="myLinks">
+            <a href="#">Каталог</a>
             <a href="#">Акции</a>
-            <a href="#">Оплата</a>
-            <a href="#">Доставка</a>
+            <a href="#">Доставка и оплата</a>
             <a href="#">О Нас</a>
             <a href="#">Контакты</a>
         </div>
@@ -59,8 +60,7 @@
     </div>
 
     <div id="items">
-        <span>Хиты</span>
-        <span>Продаж</span>
+        <h2>Хиты продаж</h2>
         <div class="slider single-item"></div>
     </div>
 
@@ -169,7 +169,7 @@
     </footer>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="slick/slick.min.js"></script>
-    <script src="scripts/slider.js"></script>
+    <script src="scripts/main.js"></script>
     <script>
         function myFunction() {
         var x = document.getElementById("myLinks");
