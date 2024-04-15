@@ -86,27 +86,34 @@ header #welcome-text {
   text-align: center;
   line-height: 1.5;
 }
-header #welcome-images {
+header #welcome-articles {
   margin-top: 20px;
   max-height: 400px;
   grid-template-rows: 50% 50%;
 }
-header #welcome-images img {
+header #welcome-articles div {
+  padding: 20px 10px 20px 10px;
   height: auto;
-  width: 270px;
   border-radius: 20px;
+  border: 2px solid #303039;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  margin-bottom: 5px;
 }
 @media screen {
-  header #welcome-images img {
+  header #welcome-articles div {
     max-width: 80%;
   }
 }
+header #welcome-articles div span {
+  display: inline-block;
+  margin-bottom: 25px;
+}
 
 #logos {
-  margin-top: 20px;
+  margin-top: 55px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -118,7 +125,7 @@ header #welcome-images img {
 }
 
 #items {
-  margin-top: 30px;
+  margin-top: 0px;
   text-align: center;
 }
 #items img {
@@ -158,7 +165,7 @@ header #welcome-images img {
   border: 3px solid #303039;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 60%;
 }
 
 .single-item {
@@ -283,19 +290,19 @@ header #welcome-images img {
   text-align: center;
   display: grid;
   grid-template-rows: 10% 30% 30% 30%;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 35% 65%;
   grid-template-areas: "cont cont" "b1 b2" "b3 b4" "b5 b6";
   grid-gap: 5px;
 }
 #contacts img {
   max-width: 25%;
-  margin-left: 25px;
+  margin-left: 50%;
   margin-right: auto;
   align-self: center;
 }
 #contacts h4 {
   align-self: center;
-  margin-right: 0px;
+  margin-right: 20%;
 }
 
 #mail {
@@ -313,17 +320,21 @@ header #welcome-images img {
   padding: 8px;
   border: 3px solid #303039;
   border-radius: 5px;
-  width: 50%;
+  width: 80%;
 }
 #mail #button {
   font-family: "Museo";
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
   background-color: white;
   padding: 8px;
   border: none;
   background-color: #4800E2;
   color: white;
   border-radius: 5px;
+  width: 65%;
 }
 
 footer {
