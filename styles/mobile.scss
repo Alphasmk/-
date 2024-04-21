@@ -96,7 +96,6 @@ header{
     height: auto;
     #welcome-text{
         padding-top: 20px;
-        text-align: center;
         line-height: 1.5;
         @extend %media-text;
     }
@@ -154,6 +153,10 @@ header{
     a{
         text-decoration: none;
         color: white;
+    }
+    .button{
+        margin-bottom: 15px;
+        width: 70%;
     }
 }
 
@@ -351,6 +354,7 @@ header{
         width: 80%;
     }
    #button{
+        @extend %media-text;
         font-family: 'Museo';
         display: block;
         margin-left: auto;

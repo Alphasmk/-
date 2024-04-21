@@ -3,10 +3,11 @@
   src: url("fonts/Museo500.otf");
 }
 footer, body nav {
+  width: 100%;
   display: grid;
   font-weight: 600;
   font-size: 17px;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 35% 65%;
   grid-template-areas: "a1 a2";
   grid-gap: 0px;
 }
@@ -18,133 +19,47 @@ footer div[style="grid-area: a1"], body nav div[style="grid-area: a1"] {
   padding-left: 30px;
 }
 
-#mail #button, #mail, #contacts, #info, #FAQ, #principles, .button, header #welcome-text {
-  font-size: 5vw;
-}
-@media (max-width: 220px) {
-  #mail #button, #mail, #contacts, #info, #FAQ, #principles, .button, header #welcome-text {
-    font-size: 11.08px;
-  }
-}
-@media (min-width: 335px) {
-  #mail #button, #mail, #contacts, #info, #FAQ, #principles, .button, header #welcome-text {
-    font-size: 16.72px;
-  }
-}
-
 body {
   font-family: "Museo";
   min-width: 200px;
 }
 body nav div[style="grid-area: a2"] #burger {
-  background-color: white;
-  border: 0px;
-  height: 67px;
-  width: 67px;
-  float: right;
-}
-body nav div[style="grid-area: a2"] svg {
-  float: right;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #4800E2;
-  position: relative;
-}
-.topnav #myLinks {
   display: none;
 }
 
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.topnav {
+  display: none;
 }
 
-.active {
-  background-color: #4CAF50;
+nav ul {
+  text-align: right;
+  display: flex !important;
+  height: 100%;
+  margin-top: 0;
+  margin-right: 20px;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: center;
+}
+nav ul a {
+  display: inline-block;
+  margin-left: 8px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #303039;
+  height: 25px;
+  padding: 10px;
+  transition: 0.2s;
+}
+nav ul a:hover {
+  background-color: #4800E2;
   color: white;
+  transform: scale(1.1);
 }
 
 img[src="images/wifi.png"] {
   width: 22px;
   margin-left: -5px;
-}
-
-header {
-  height: auto;
-}
-header #welcome-text {
-  padding-top: 20px;
-  line-height: 1.5;
-}
-header #welcome-articles {
-  margin-top: 20px;
-  max-height: 400px;
-  grid-template-rows: 50% 50%;
-}
-header #welcome-articles div {
-  padding: 20px 10px 20px 10px;
-  height: auto;
-  border-radius: 20px;
-  border: 2px solid #303039;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin-bottom: 5px;
-}
-@media screen {
-  header #welcome-articles div {
-    max-width: 80%;
-  }
-}
-header #welcome-articles div span {
-  display: inline-block;
-  margin-bottom: 25px;
-}
-
-#logos {
-  margin-top: 55px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-#logos img {
-  height: 40px;
-  margin: 2px;
-}
-
-#items {
-  margin-top: 0px;
-  text-align: center;
-}
-#items img {
-  max-width: 100%;
-}
-
-.slider {
-  margin: 20px 40px 40px 40px;
-}
-.slider .slick-prev,
-.slider .slick-next {
-  height: 40px;
-}
-.slider a {
-  text-decoration: none;
-  color: white;
-}
-.slider .button {
-  margin-bottom: 15px;
-  width: 70%;
 }
 
 .button {
@@ -154,6 +69,7 @@ header #welcome-articles div span {
   border: 3px solid #8650fa;
   background-color: #4800E2;
   border-radius: 10px;
+  transition: 0.4s;
 }
 @media screen {
   .button {
@@ -171,23 +87,115 @@ header #welcome-articles div span {
   width: 60%;
 }
 
-.single-item {
-  border: 3px solid #4800E2;
-  border-radius: 15px;
-  padding: 8px;
+header {
+  height: auto;
 }
-.single-item img {
-  border-radius: 15px;
+header #welcome-articles {
+  display: grid;
+  grid-template-areas: "a1 a2 a3";
+  grid-template-columns: 33% 33% 33%;
+}
+header #welcome-articles div {
+  padding: 20px 10px 20px 10px;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #303039;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  transition: 0.2s;
+  margin-bottom: 5px;
+}
+@media screen {
+  header #welcome-articles div {
+    width: 80%;
+  }
+}
+header #welcome-articles div span {
+  display: inline-block;
+  margin-bottom: 25px;
+  max-height: 95px;
+}
+header #welcome-articles div:hover {
+  transform: scale(1.05);
+}
+header #welcome-articles div .button2:hover {
+  border: 3px solid #4800E2;
+  color: #4800E2;
+}
+header #welcome-articles div[style="grid-area: a3; display: none;"] {
+  display: block !important;
+}
+
+#logos {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#logos img {
+  height: 80px;
+  margin: 2px;
+  display: block !important;
+}
+
+#items {
+  margin-top: 0px;
+  text-align: center;
+}
+#items .itcat {
+  margin: 5px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: "x1 x2 x3 x4" "x5 x6 x7 x8";
+  grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+}
+#items .itcat img {
+  height: 200px;
+}
+#items .itcat div {
+  border-radius: 25px;
+  border: 3px solid #4800E2;
+  padding: 10px;
+}
+#items .itcat div .button {
+  width: 80%;
+  color: white;
+}
+#items .itcat div .button:hover {
+  transform: scale(1.05);
 }
 
 #principles {
   text-align: center;
+  display: grid;
+  grid-template-areas: "title title" "a1 a2" "a4 a3";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 14% 43% 43%;
+  grid-gap: 10px;
 }
-#principles h2 {
-  color: #303039;
+#principles div[style="grid-area: a1"] {
+  margin-right: 0;
+}
+#principles div[style="grid-area: a2"] {
+  margin-left: 0;
+}
+#principles div[style="grid-area: a3"] {
+  margin-left: 0;
+}
+#principles div[style="grid-area: a4"] {
+  margin-right: 0;
+}
+
+.grey {
+  background-color: #303039;
+  color: white;
 }
 
 .item-principles {
+  font-size: 3vw;
   border-radius: 20px;
   border: 2px solid #303039;
   padding: 20px;
@@ -201,15 +209,18 @@ header #welcome-articles div span {
 }
 .item-principles img {
   width: 40px;
+  height: 40px;
 }
-
-.grey {
-  background-color: #303039;
-  color: white;
+@media (min-width: 569px) {
+  .item-principles {
+    font-size: 16px;
+  }
 }
 
 #FAQ {
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #FAQ h1, #FAQ h4 {
   margin-left: 20px;
@@ -270,7 +281,7 @@ header #welcome-articles div span {
   top: 16px;
 }
 #FAQ .accordion > .accordion-toggle:checked ~ section {
-  height: 225px;
+  height: 100px;
 }
 #FAQ .accordion > section p {
   margin: 15px 0;
@@ -280,11 +291,16 @@ header #welcome-articles div span {
 #info {
   text-align: center;
 }
+#info .button:hover {
+  border: 3px solid #4800E2;
+  color: #4800E2;
+  transform: scale(1.05);
+}
 
 #map {
   border: 3px solid #303039;
-  max-width: 80%;
-  height: 250px;
+  width: 70%;
+  height: 400px;
   margin-top: 20px;
   border-radius: 20px;
 }
@@ -293,37 +309,38 @@ header #welcome-articles div span {
   text-align: center;
   display: grid;
   grid-template-rows: 10% 30% 30% 30%;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 40% 60%;
   grid-template-areas: "cont cont" "b1 b2" "b3 b4" "b5 b6";
-  grid-gap: 5px;
+  grid-gap: 0px;
 }
 #contacts img {
-  max-width: 25%;
-  margin-left: 50%;
+  height: 40px;
+  margin-left: 70%;
   margin-right: auto;
   align-self: center;
+  margin-right: 0;
 }
 #contacts h4 {
   align-self: center;
-  margin-right: 20%;
+  margin-right: 10%;
 }
 
 #mail {
   text-align: center;
   height: auto;
   padding: 15px;
-  border: 2px solid #4800E2;
   border-radius: 20px;
-  margin: 25px 20px 20px 20px;
+  margin: 0px 20px 20px 20px;
+  font-size: 20px;
 }
 #mail input[type=email] {
   font-family: "Museo";
   display: inline-block;
-  height: 15px;
+  height: 25px;
   padding: 8px;
   border: 3px solid #303039;
   border-radius: 5px;
-  width: 80%;
+  width: 50%;
 }
 #mail #button {
   font-family: "Museo";
@@ -337,9 +354,15 @@ header #welcome-articles div span {
   background-color: #4800E2;
   color: white;
   border-radius: 5px;
-  width: 65%;
+  width: 40%;
+  height: 45px;
+  transition: 0.2s;
+}
+#mail #button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 footer {
   margin-top: 10px;
-}/*# sourceMappingURL=mobile.css.map */
+}/*# sourceMappingURL=pc.css.map */

@@ -16,6 +16,10 @@ header {
   height: 500px;
 }
 
+#welcome-text {
+  text-align: center;
+}
+
 footer {
   height: 67px;
   border-top: 2px solid #303039;

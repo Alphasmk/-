@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
     <link rel="stylesheet" type="text/css" media="(max-width: 420px)" href="css/mobile.css">
     <link rel="stylesheet" type="text/css" media="(min-width: 421px) and (max-width: 1000px)" href="css/tablet.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 1001px)" href="css/pc.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -24,6 +25,13 @@
                     <line x1="14" y1="43" x2="38" y2="43" stroke="black" stroke-width="3" stroke-linecap="round"/>
                 </svg>
             </button>
+            <ul style="display: none;">
+                <a href="#">Каталог</a>
+                <a href="#">Акции</a>
+                <a href="#">Доставка и оплата</a>
+                <a href="#">О Нас</a>
+                <a href="#">Контакты</a>
+            </ul>
         </div>
     </nav>
 
@@ -47,13 +55,19 @@
         </div>
         <div id="welcome-articles">
             <div style="grid-area: a1;">
-                <span><h3>Как выбрать наушники?</br>Мнение профессионалов</h3></span>
+                <span><h3>Как выбрать наушники?</h3></span>
                 <a href="#" class="button button2">
                     Перейти
                 </a>
             </div>
             <div style="grid-area: a2;">
                 <span><h3>В чем отличия популярных видеокамер?</h3></span>
+                <a href="#" class="button button2">
+                    Перейти
+                </a>
+            </div>
+            <div style="grid-area: a3; display: none;">
+                <span><h3>Плюсы и минусы видеокамер Sony</h3></span>
                 <a href="#" class="button button2">
                     Перейти
                 </a>
@@ -68,34 +82,37 @@
         <img src="images/logos/logitech.png">
         <img src="images/logos/samsung.png">
         <img src="images/logos/xiaomi.png">
+        <img src="images/logos/huawei.png" style="display: none;">
+        <img src="images/logos/sap.png" style="display: none;">
     </div>
 
     <div id="items">
         <h2>Хиты продаж</h2>
         <div class="slider single-item"></div>
+        <div class="itcat"></div>
     </div>
 
     <div id="principles">
-        <h2>Наши принципы</h2>
-        <div class="item-principles grey">
+        <h2 style="grid-area: title" >Наши принципы</h2>
+        <div style="grid-area: a1" class="item-principles grey">
             <img src="images/delivery.png"/>
             <h3>Доставка</h3>
             Бесплатная доставка</br>
             по Беларуси: от 1 дня
         </div>
-        <div class="item-principles">
+        <div style="grid-area: a2" class="item-principles">
             <img src="images/credit-cards-payment.png"/>
             <h3>Удобная оплата</h3>
             Наличная и</br>
             безналичная оплата
         </div>
-        <div class="item-principles grey">
+        <div style="grid-area: a3" class="item-principles grey">
             <img src="images/bank.png"/>
             <h3>Низкие цены</h3>
             Приемлемые цены для</br>
             наших покупателей
         </div>
-        <div class="item-principles">
+        <div style="grid-area: a4" class="item-principles">
             <img src="images/medal.png"/>
             <h3>Сертифицированный</br>
                 товар</h3>
@@ -163,7 +180,7 @@
 
     <div id="mail">
         <h3>Будь в курсе событий в</br>мире технологий</h3>
-        <h4>Подпишитесь на нашу рассылку</h4>
+        <h4>Подпишись на нашу рассылку</h4>
         <form>
             <input type="email" placeholder="E-mail адрес" id="inputField">
             <button type="reset" id="button">Подписаться</button>
@@ -174,8 +191,6 @@
         <div style="grid-area: a1">
             Istat
             <img src="images/wifi.png">
-            </div>
-            <div style="grid-area: a2">
             </div>
     </footer>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>

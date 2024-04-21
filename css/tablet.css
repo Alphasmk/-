@@ -1,17 +1,32 @@
-body nav {
+footer, body nav {
   display: grid;
+  width: 100%;
   font-weight: 600;
   font-size: 17px;
   grid-template-columns: 60% 40%;
   grid-template-areas: "a1 a2";
   grid-gap: 0px;
 }
-body nav div {
+footer div, body nav div {
   letter-spacing: 1px;
 }
-body nav div[style="grid-area: a1"] {
+footer div[style="grid-area: a1"], body nav div[style="grid-area: a1"] {
   padding-top: 20px;
   padding-left: 30px;
+}
+
+#mail #button, #mail, #contacts, #info, #FAQ, .item-principles, .button, header #welcome-articles div {
+  font-size: 3vw;
+}
+@media (min-width: 660px) {
+  #mail #button, #mail, #contacts, #info, #FAQ, .item-principles, .button, header #welcome-articles div {
+    font-size: 20px;
+  }
+}
+@media (max-width: 520px) {
+  #mail #button, #mail, #contacts, #info, #FAQ, .item-principles, .button, header #welcome-articles div {
+    font-size: 15px;
+  }
 }
 
 @font-face {
@@ -22,14 +37,343 @@ body {
   font-family: "Museo";
   min-width: 200px;
 }
-#burger-menu {
-  display: none;
+body nav div[style="grid-area: a2"] #burger {
+  background-color: white;
+  border: 0px;
+  height: 67px;
+  width: 67px;
+  float: right;
 }
-
-#burger {
-  display: none;
+body nav div[style="grid-area: a2"] svg {
+  float: right;
 }
 
 img {
   height: 20px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #4800E2;
+  position: relative;
+}
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+header {
+  height: auto;
+}
+header #welcome-articles {
+  display: grid;
+  grid-template-areas: "a1 a2";
+  grid-template-columns: 50% 50%;
+}
+header #welcome-articles div {
+  padding: 20px 10px 20px 10px;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #303039;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 5px;
+}
+@media screen {
+  header #welcome-articles div {
+    width: 80%;
+  }
+}
+header #welcome-articles div span {
+  display: inline-block;
+  margin-bottom: 25px;
+  max-height: 95px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  border: 3px solid #8650fa;
+  background-color: #4800E2;
+  border-radius: 10px;
+}
+@media screen {
+  .button {
+    max-width: 70%;
+  }
+}
+
+.button2 {
+  display: block;
+  color: #303039;
+  background-color: white;
+  border: 3px solid #303039;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+#logos {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#logos img {
+  height: 55px;
+  margin: 2px;
+}
+
+#items {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.slider {
+  margin: 20px 40px 10px 40px;
+}
+.slider .slick-prev,
+.slider .slick-next {
+  height: 40px;
+}
+.slider a {
+  text-decoration: none;
+  color: white;
+}
+.slider div img {
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 625px) {
+  .slider div img {
+    height: 200px;
+  }
+}
+.slider .button {
+  margin-bottom: 15px;
+  width: 70%;
+}
+
+.single-item {
+  border-radius: 15px;
+  padding: 8px;
+}
+.single-item img {
+  border-radius: 15px;
+}
+
+.slick-slide {
+  border: 3px solid #4800E2;
+  padding: 3px;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+#principles {
+  text-align: center;
+  display: grid;
+  grid-template-areas: "title title" "a1 a2" "a4 a3";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 14% 43% 43%;
+  grid-gap: 10px;
+}
+#principles div[style="grid-area: a1"] {
+  margin-right: 0;
+}
+#principles div[style="grid-area: a2"] {
+  margin-left: 0;
+}
+#principles div[style="grid-area: a3"] {
+  margin-left: 0;
+}
+#principles div[style="grid-area: a4"] {
+  margin-right: 0;
+}
+
+.grey {
+  background-color: #303039;
+  color: white;
+}
+
+.item-principles {
+  font-size: 3vw;
+  border-radius: 20px;
+  border: 2px solid #303039;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen {
+  .item-principles {
+    width: 70%;
+  }
+}
+.item-principles img {
+  width: 40px;
+  height: 40px;
+}
+@media (min-width: 569px) {
+  .item-principles {
+    font-size: 16px;
+  }
+}
+
+#FAQ {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#FAQ h1, #FAQ h4 {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+#FAQ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#FAQ body {
+  margin: 10px;
+}
+#FAQ .accordion {
+  transform: translateZ(0);
+  background: white;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+#FAQ .accordion > .accordion-toggle {
+  display: none;
+  position: absolute;
+  opacity: 0;
+}
+#FAQ .accordion > label {
+  display: block;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background: white;
+  color: #303039;
+  font-weight: bold;
+  cursor: pointer;
+}
+#FAQ .accordion > label:after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid #4800E2;
+  border-top: 2px solid #4800E2;
+  transform: rotate(-135deg);
+  transition: 0.4s transform;
+}
+#FAQ .accordion > section {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.4s;
+}
+#FAQ .accordion > .accordion-toggle:checked ~ label:after {
+  transform: rotate(45deg);
+  top: 16px;
+}
+#FAQ .accordion > .accordion-toggle:checked ~ section {
+  height: 150px;
+}
+#FAQ .accordion > section p {
+  margin: 15px 0;
+  padding: 0 20px;
+}
+
+#info {
+  text-align: center;
+}
+
+#map {
+  border: 3px solid #303039;
+  width: 70%;
+  height: 280px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+#contacts {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 10% 30% 30% 30%;
+  grid-template-columns: 35% 65%;
+  grid-template-areas: "cont cont" "b1 b2" "b3 b4" "b5 b6";
+  grid-gap: 0px;
+}
+#contacts img {
+  height: 40px;
+  margin-left: 70%;
+  margin-right: auto;
+  align-self: center;
+}
+#contacts h4 {
+  align-self: center;
+  margin-right: 10%;
+}
+
+#mail {
+  text-align: center;
+  height: auto;
+  padding: 15px;
+  border: 2px solid #4800E2;
+  border-radius: 20px;
+  margin: 25px 20px 20px 20px;
+}
+#mail input[type=email] {
+  font-family: "Museo";
+  display: inline-block;
+  height: 25px;
+  padding: 8px;
+  border: 3px solid #303039;
+  border-radius: 5px;
+  width: 80%;
+}
+#mail #button {
+  font-family: "Museo";
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  background-color: white;
+  padding: 8px;
+  border: none;
+  background-color: #4800E2;
+  color: white;
+  border-radius: 5px;
+  width: 50%;
+  height: 50px;
+}
+
+footer {
+  margin-top: 10px;
 }/*# sourceMappingURL=tablet.css.map */
