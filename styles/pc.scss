@@ -16,7 +16,7 @@ $border-radius: 20px;
     display: grid;
         font-weight: 600;
         font-size: 17px;
-        grid-template-columns: 35% 65%;
+        grid-template-columns: 25% 75%;
         grid-template-areas:
         "a1 a2";
         grid-gap: 0px;
@@ -194,7 +194,7 @@ header{
     "title title"
     "a1 a2"
     "a4 a3";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 49%;
     grid-template-rows: 14% 43% 43%;
     grid-gap: 10px;
     div[style="grid-area: a1"]
@@ -324,6 +324,7 @@ header{
 {
     text-align: center;
     .button{
+        width: 40%;
         &:hover{
             border: 3px solid $main-color;
             color: $main-color;

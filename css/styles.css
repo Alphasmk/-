@@ -11,6 +11,12 @@ nav {
   border-bottom: 2px solid #303039;
   display: grid;
 }
+nav div[style="grid-area: a1"] {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
 
 header {
   height: 500px;

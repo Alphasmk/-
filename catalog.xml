@@ -5,47 +5,55 @@
         <image>images/catalog/airpods-pro.jpg</image>
         <price>$249</price>
         <area>x1</area>
+        <rate>4.7</rate>
     </product>
     <product>
-        <name>AirPods 2</name>
+        <name>AirPods 3</name>
         <image>images/catalog/airpods.jpg</image>
         <price>$159</price>
         <area>x2</area>
+        <rate>4.9</rate>
     </product>
     <product>
         <name>HERO12 Black</name>
         <image>images/catalog/gopro.jpg</image>
         <price>$199</price>
         <area>x3</area>
+        <rate>4.2</rate>
     </product>
     <product>
         <name>Logitech G435</name>
         <image>images/catalog/headphones-logitech.jpg</image>
         <price>$89</price>
         <area>x4</area>
+        <rate>4</rate>
     </product>
     <product>
         <name>Galaxy Buds FE</name>
         <image>images/catalog/headphones-samsung.jpg</image>
         <price>$129</price>
         <area>x5</area>
+        <rate>4.9</rate>
     </product>
     <product>
         <name>Logitech HD C270</name>
         <image>images/catalog/logitech-video.jpg</image>
         <price>$35</price>
         <area>x6</area>
+        <rate>3.8</rate>
     </product>
     <product>
         <name>Sony HDR-CX405</name>
         <image>images/catalog/sony-video.jpg</image>
         <price>$320</price>
         <area>x7</area>
+        <rate>4</rate>
     </product>
     <product>
         <name>Xiaomi Mi Camera</name>
         <image>images/catalog/xiaomi-video.jpg</image>
         <price>$29</price>
         <area>x8</area>
+        <rate>4.5</rate>
     </product>
 </products>

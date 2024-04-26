@@ -14,6 +14,11 @@ nav{
     height: 67px;
     border-bottom: 2px solid $border-color;
     display: grid;
+    div[style="grid-area: a1"]
+    {
+        cursor: default;
+        user-select: none;
+    }
 }
 
 header{

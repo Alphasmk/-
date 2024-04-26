@@ -7,7 +7,7 @@ footer, body nav {
   display: grid;
   font-weight: 600;
   font-size: 17px;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 25% 75%;
   grid-template-areas: "a1 a2";
   grid-gap: 0px;
 }
@@ -172,7 +172,7 @@ header #welcome-articles div[style="grid-area: a3; display: none;"] {
   text-align: center;
   display: grid;
   grid-template-areas: "title title" "a1 a2" "a4 a3";
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 49%;
   grid-template-rows: 14% 43% 43%;
   grid-gap: 10px;
 }
@@ -290,6 +290,9 @@ header #welcome-articles div[style="grid-area: a3; display: none;"] {
 
 #info {
   text-align: center;
+}
+#info .button {
+  width: 40%;
 }
 #info .button:hover {
   border: 3px solid #4800E2;

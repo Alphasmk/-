@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="css/catalog.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div style="grid-area: a1">
+            Istat
+            <img src="images/wifi.png">
+            </div>
+            <div style="grid-area: a2">
+                <button id="burger" href="javascript:void(0)" onclick="myFunction()">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="67" height="67">
+                        <line x1="14" y1="27" x2="38" y2="27" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="14" y1="35" x2="38" y2="35" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="14" y1="43" x2="38" y2="43" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <ul style="display: none;">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Доставка и оплата</a>
+                    <a href="#">О Нас</a>
+                    <a href="#">Контакты</a>
+                </ul>
+            </div>
+    </nav>
+
+    <div id="burger-menu" style="height: auto;">
+        <div class="topnav">
+            <div id="myLinks">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="#">Акции</a>
+                <a href="#">Доставка и оплата</a>
+                <a href="#">О Нас</a>
+                <a href="#">Контакты</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="catalog">
+        <div id="sort" style="grid-area: a1; display: flex; justify-content: center;">
+            <select class="wide">
+                <option data-display="Сортировка">Без сортировки</option>
+                <option>По цене: по возрастанию</option>
+                <option>По цене: по убыванию</option>
+                <option>По рейтингу: по возрастанию</option>
+                <option>По рейтингу: по убыванию</option>
+            </select>
+        </div>
+        <div class="items" style="grid-area: a2">
+        </div>
+    </div>
+    <footer>
+        <div style="grid-area: a1">
+            Istat
+            <img src="images/wifi.png">
+            </div>
+    </footer>
+    <script src="scripts/nice-select/jquery.js"></script>
+    <script src="scripts/nice-select/jquery.nice-select.js"></script>
+    <script src="scripts/catalog.js"></script>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myLinks");
+         if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
