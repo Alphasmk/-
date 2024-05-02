@@ -13,10 +13,11 @@ $(document).ready(function() {
                 $(xml).find('product').each(function() {
                     var name = $(this).find('name').text();
                     var image = $(this).find('image').text();
-                    var price = parseFloat($(this).find('price').text().replace('$', '')); // Преобразуем строку цены в число
+                    var price = parseFloat($(this).find('price').text().replace('$', ''));
                     var rate = parseFloat($(this).find('rate').text());
-                    
-                    products.push({ name: name, image: image, price: price, rate: rate });
+                    var link = $(this).find('link').text();
+
+                    products.push({ name: name, image: image, price: price, rate: rate, link: link });
                 });
 
                 displayProducts(products);
@@ -36,7 +37,7 @@ $(document).ready(function() {
                             <span>Рейтинг: <img style="width: 2vw; height: auto" src="images/catalog/svg/Star.svg"/> ${product.rate}</span>
                             <span>${product.name}</span>
                             <span style="font-weight: 900">Цена: $${product.price}</span>
-                            <a href="#" class="button">Перейти</a>
+                            <a href="${product.link}" class="button">Перейти</a>
                         </div>
                     `;
                     $('.items').append(productHtml);
@@ -59,7 +60,7 @@ $(document).ready(function() {
                                     <span>${product.name}</span>
                                 </div>
                                 <span style="font-weight: 900">Цена: $${product.price}</span>
-                                <a href="#" class="button">Перейти</a>
+                                <a href="${product.link}" class="button">Перейти</a>
                             </div>
                         </div>
                     `;
@@ -80,7 +81,7 @@ $(document).ready(function() {
                                     <span><img style="width: 5vw; height: auto" src="images/catalog/svg/Star.svg"/></span>${product.rate}
                                     <span style="display: block; text-align: center">${product.name}</span>
                                 <span style="font-weight: 900">$${product.price}</span>
-                                <a href="#" class="button">Перейти</a>
+                                <a href="${product.link}" class="button">Перейти</a>
                         </div>
                     `;
                     $('.items').append(productHtml);
@@ -90,10 +91,10 @@ $(document).ready(function() {
 
     loadProducts();
 
-    $('select').change(function() {
+    $('.sort').change(function() {
         var selectedOption = $(this).val();
         var products = [];
-
+    
         $.ajax({
             type: "GET",
             url: "catalog.xml",
@@ -102,29 +103,29 @@ $(document).ready(function() {
                 $(xml).find('product').each(function() {
                     var name = $(this).find('name').text();
                     var image = $(this).find('image').text();
-                    var price = parseFloat($(this).find('price').text().replace('$', '')); // Преобразуем строку цены в число
+                    var price = parseFloat($(this).find('price').text().replace('$', ''));
                     var rate = parseFloat($(this).find('rate').text());
                     
                     products.push({ name: name, image: image, price: price, rate: rate });
                 });
-
+    
                 switch (selectedOption) {
-                    case 'По цене: по возрастанию':
+                    case 'ascPrice':
                         products.sort((a, b) => a.price - b.price);
                         break;
-                    case 'По цене: по убыванию':
+                    case 'descPrice':
                         products.sort((a, b) => b.price - a.price);
                         break;
-                    case 'По рейтингу: по возрастанию':
+                    case 'ascRate':
                         products.sort((a, b) => a.rate - b.rate);
                         break;
-                    case 'По рейтингу: по убыванию':
+                    case 'descRate':
                         products.sort((a, b) => b.rate - a.rate);
                         break;
                     default:
                         break;
                 }
-
+    
                 displayProducts(products);
             }
         });

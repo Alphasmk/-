@@ -46,16 +46,17 @@
     </div>
 
     <div id="catalog">
-        <div id="sort" style="grid-area: a1; display: flex; justify-content: center;">
-            <select class="wide">
+        <div id="sort" style="display: flex; justify-content: center;">
+            <select class="sort wide">
                 <option data-display="Сортировка">Без сортировки</option>
-                <option>По цене: по возрастанию</option>
-                <option>По цене: по убыванию</option>
-                <option>По рейтингу: по возрастанию</option>
-                <option>По рейтингу: по убыванию</option>
+                <option value="ascPrice">Цена: по возрастанию</option>
+                <option value="descPrice">Цена: по убыванию</option>
+                <option value="ascRate">Рейтинг: по возрастанию</option>
+                <option value="descRate">Рейтинг: по убыванию</option>
             </select>
+
         </div>
-        <div class="items" style="grid-area: a2">
+        <div class="items">
         </div>
     </div>
     <footer>

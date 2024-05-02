@@ -257,10 +257,8 @@ img[src="images/wifi.png"] {
   }
 }
 @media (min-width: 1001px) {
-  #catalog {
-    display: grid;
-    grid-template-areas: "a1 a2";
-    grid-template-columns: 20% 80%;
+  #catalog .sort {
+    margin: 20px;
   }
   #catalog #sort {
     border-right: 2px solid #303039;
@@ -293,7 +291,7 @@ img[src="images/wifi.png"] {
   }
   #catalog .items .single-item {
     padding: 5px;
-    margin: 35px;
+    margin: 30px;
     border-radius: 20px;
     box-shadow: 0px 0px 44px -19px rgba(44, 44, 47, 0.75);
     transition: 0.3s;
@@ -357,6 +355,7 @@ footer {
   grid-template-areas: "a1 a2";
   grid-gap: 0px;
   border-top: 2px solid #303039;
+  height: 67px;
 }
 footer div {
   letter-spacing: 1px;

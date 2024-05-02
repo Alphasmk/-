@@ -5,7 +5,8 @@
         <image>images/catalog/airpods-pro.jpg</image>
         <price>$249</price>
         <area>x1</area>
-        <rate>4.7</rate>
+        <rate>4</rate>
+        <link>catalog/airpodspro.html</link>
     </product>
     <product>
         <name>AirPods 3</name>
@@ -13,6 +14,7 @@
         <price>$159</price>
         <area>x2</area>
         <rate>4.9</rate>
+        <link>error.html</link>
     </product>
     <product>
         <name>HERO12 Black</name>
@@ -20,6 +22,7 @@
         <price>$199</price>
         <area>x3</area>
         <rate>4.2</rate>
+        <link>error.html</link>
     </product>
     <product>
         <name>Logitech G435</name>
@@ -27,6 +30,7 @@
         <price>$89</price>
         <area>x4</area>
         <rate>4</rate>
+        <link>error.html</link>
     </product>
     <product>
         <name>Galaxy Buds FE</name>
@@ -34,6 +38,7 @@
         <price>$129</price>
         <area>x5</area>
         <rate>4.9</rate>
+        <link>error.html</link>
     </product>
     <product>
         <name>Logitech HD C270</name>
@@ -41,6 +46,7 @@
         <price>$35</price>
         <area>x6</area>
         <rate>3.8</rate>
+        <link>error.html</link>
     </product>
     <product>
         <name>Sony HDR-CX405</name>
@@ -48,6 +54,7 @@
         <price>$320</price>
         <area>x7</area>
         <rate>4</rate>
+        <link>error.html</link>
     </product>
     <product>
         <name>Xiaomi Mi Camera</name>
@@ -55,5 +62,6 @@
         <price>$29</price>
         <area>x8</area>
         <rate>4.5</rate>
+        <link>error.html</link>
     </product>
 </products>

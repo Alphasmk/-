@@ -11,7 +11,8 @@ $(document).ready(function(){
                 var image = $(this).find('image').text();
                 var price = $(this).find('price').text();
                 var area = $(this).find('area').text();
-                $('.slider').append('<div style="grid-area: ' + area + '"><img src="' + image + '"><p><h3>' + name + '</h3>' + price + '</p><a href="#" class="button">Приобрести</a></div>');
+                var link = $(this).find('link').text();
+                $('.slider').append('<div style="grid-area: ' + area + '"><img src="' + image + '"><p><h3>' + name + '</h3>' + price + '</p><a href="' + link + '" class="button">Приобрести</a></div>');
             });
           }
           if(window.matchMedia('(min-width: 1001px)').matches)
@@ -21,7 +22,8 @@ $(document).ready(function(){
                 var image = $(this).find('image').text();
                 var price = $(this).find('price').text();
                 var area = $(this).find('area').text();
-                $('.itcat').append('<div style="grid-area: ' + area + '"><img src="' + image + '"><p><h3>' + name + '</h3>' + price + '</p><a href="#" class="button">Приобрести</a></div>');
+                var link = $(this).find('link').text();
+                $('.itcat').append('<div style="grid-area: ' + area + '"><img src="' + image + '"><p><h3>' + name + '</h3>' + price + '</p><a href="' + link + '" class="button">Приобрести</a></div>');
             });
           }
           if(window.matchMedia('(max-width: 420px)').matches)

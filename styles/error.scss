@@ -1,0 +1,49 @@
+@font-face{
+    font-family: Museo;
+    src:
+        url("fonts/Museo500.otf");
+}
+
+body{
+    background-color: #4800E2;
+    div{
+        margin-top: 20px;
+        text-align: center;
+        color: white;
+        font-family: "Museo";
+        font-weight: 700;
+        @media (max-width: 1000px)
+        {
+            font-size: 3vw;
+        }
+
+        @media (min-width: 1001px)
+        {
+            font-size: 2vw;
+        }
+        span{
+            font-style: italic;
+        }
+        .button{
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 10px;
+            background-color: white;
+            color: black !important;
+            font-weight: 500;
+            width: 60%;
+            @media screen {
+                max-width: 70%;
+            }
+            transition: 0.4s;
+            color: white;
+            margin-top: 2%;
+            &:hover{
+                transform: scale(1.1);
+            }
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

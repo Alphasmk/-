@@ -287,10 +287,10 @@ img[src="images/wifi.png"]{
 
     @media (min-width: 1001px)
     {
-        display: grid;
-        grid-template-areas:
-        "a1 a2";
-        grid-template-columns: 20% 80%;
+        .sort{
+            margin: 20px;
+        }
+
         #sort{
             border-right: 2px solid $border-color;
             height: auto;
@@ -323,7 +323,7 @@ img[src="images/wifi.png"]{
             }
             .single-item{
                 padding: 5px;
-                margin: 35px;
+                margin: 30px;
                 border-radius: $border-radius;
                 box-shadow: 0px 0px 44px -19px rgba(44, 44, 47 ,0.75);
                 transition: 0.3s;
@@ -382,4 +382,5 @@ img[src="images/wifi.png"]{
 footer{
     @include nav;
     border-top: 2px solid $border-color;
+    height: 67px;
 }

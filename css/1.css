@@ -1,0 +1,191 @@
+@font-face {
+  font-family: Museo;
+  src: url("fonts/Museo500.otf");
+}
+body {
+  margin: 0;
+  font-family: Museo;
+}
+body nav {
+  display: grid;
+  font-weight: 600;
+  font-size: 17px;
+  grid-template-areas: "a1 a2";
+  grid-gap: 0px;
+  border-bottom: 2px solid #303039;
+}
+body nav div {
+  letter-spacing: 1px;
+}
+body nav div[style="grid-area: a1"] {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+@media (max-width: 420px) {
+  body {
+    font-size: 4.5vw;
+    line-height: 7vw;
+    grid-template-columns: 60% 40%;
+  }
+  body #article {
+    padding: 20px;
+  }
+  body div[style="grid-area: a2"] #burger {
+    background-color: white;
+    border: 0px;
+    height: 67px;
+    width: 67px;
+    float: right;
+  }
+  body div[style="grid-area: a2"] svg {
+    float: right;
+  }
+}
+@media (min-width: 421px) and (max-width: 1000px) {
+  body {
+    line-height: 5vw;
+    font-size: 2.5vw;
+    grid-template-columns: 60% 40%;
+  }
+  body #article {
+    padding: 10px 30px 10px 30px;
+  }
+  body div[style="grid-area: a2"] #burger {
+    background-color: white;
+    border: 0px;
+    height: 67px;
+    width: 67px;
+    float: right;
+  }
+  body div[style="grid-area: a2"] svg {
+    float: right;
+  }
+}
+@media (min-width: 1001px) {
+  body {
+    grid-template-columns: 25% 75%;
+  }
+  body div[style="grid-area: a2"] #burger {
+    display: none;
+  }
+  body #article {
+    padding: 10px 30px 10px 30px;
+    font-size: 1.5vw;
+    line-height: 3vw;
+  }
+  body nav ul {
+    text-align: right;
+    display: flex !important;
+    height: 100%;
+    margin-top: 0;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+  }
+  body nav ul a {
+    display: inline-block;
+    margin-left: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #303039;
+    height: 25px;
+    padding: 10px;
+    transition: 0.2s;
+  }
+  body nav ul a:hover {
+    background-color: #4800E2;
+    color: white;
+    transform: scale(1.1);
+  }
+}
+
+img[src="/images/wifi.png"] {
+  width: 22px;
+  margin-left: -5px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #4800E2;
+  position: relative;
+}
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li {
+  margin: 10px 0px 10px 0px;
+  text-align: left;
+}
+
+span {
+  font-style: italic;
+  font-weight: bold;
+}
+
+@media (min-width: 1001px) {
+  #burger-menu {
+    display: none;
+  }
+}
+#pos {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  border: 3px solid #8650fa;
+  background-color: #4800E2;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+@media screen {
+  .button {
+    width: 50%;
+  }
+}
+.button:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  display: grid;
+  font-weight: 600;
+  font-size: 17px;
+  grid-template-areas: "a1 a2";
+  grid-gap: 0px;
+  border-top: 2px solid #303039;
+}
+footer div {
+  letter-spacing: 1px;
+}
+footer div[style="grid-area: a1"] {
+  padding-top: 20px;
+  padding-left: 30px;
+}/*# sourceMappingURL=1.css.map */

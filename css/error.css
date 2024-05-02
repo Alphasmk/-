@@ -1,0 +1,50 @@
+@font-face {
+  font-family: Museo;
+  src: url("fonts/Museo500.otf");
+}
+body {
+  background-color: #4800E2;
+}
+body div {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-family: "Museo";
+  font-weight: 700;
+}
+@media (max-width: 1000px) {
+  body div {
+    font-size: 3vw;
+  }
+}
+@media (min-width: 1001px) {
+  body div {
+    font-size: 2vw;
+  }
+}
+body div span {
+  font-style: italic;
+}
+body div .button {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: white;
+  color: black !important;
+  font-weight: 500;
+  width: 60%;
+  transition: 0.4s;
+  color: white;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen {
+  body div .button {
+    max-width: 70%;
+  }
+}
+body div .button:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=error.css.map */

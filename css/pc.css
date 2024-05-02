@@ -333,7 +333,9 @@ header #welcome-articles div[style="grid-area: a3; display: none;"] {
   height: auto;
   padding: 15px;
   border-radius: 20px;
-  margin: 0px 20px 20px 20px;
+  border: 3px solid #4800E2;
+  width: 70%;
+  margin: 20px auto 20px auto;
   font-size: 20px;
 }
 #mail input[type=email] {
