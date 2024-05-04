@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="/css/buy-page.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div style="grid-area: a1">
+        Istat
+        <img src="/images/wifi.png">
+        </div>
+        <div style="grid-area: a2">
+            <button id="burger" href="javascript:void(0)" onclick="myFunction()">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="67" height="67">
+                    <line x1="14" y1="27" x2="38" y2="27" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="14" y1="35" x2="38" y2="35" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="14" y1="43" x2="38" y2="43" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <ul style="display: none;">
+                <a href="/index.html">Главная</a>
+                <a href="/catalog.html">Каталог</a>
+                <a href="#">Акции</a>
+                <a href="#">Доставка и оплата</a>
+                <a href="#">О Нас</a>
+                <a href="#">Контакты</a>
+            </ul>
+        </div>
+    </nav>
+    <h1 style="text-align: center;">Оформление заказа</h1>
+    <div id="main">
+        <div style="grid-area: a1;">
+            <form id="form1">
+                <h2>КОНТАКТНЫЕ ДАННЫЕ</h2>
+                <p>
+                    <input type="text" id="name" required placeholder="*Имя" style="width: 45%;">
+                    <input type="text" id="secondname" required placeholder="*Фамилия" style="width: 45%;">
+                </p>
+                <p>
+                    <input type="email" id="email" required placeholder="*E-Mail" style="width: 99%;">
+                </p>
+                <p>
+                    <input type="tel" id="telephone" required placeholder="*Номер телефона" style="width: 99%;">
+                </p>
+                <h2>СПОСОБ ДОСТАВКИ</h2>
+                <p>
+                    <input type="radio" name="ship" id="rad1" name="rad1" checked><label for="rad1">Самовывоз</label>
+                    <input type="radio" name="ship" id="rad2"><label for="rad2">Доставка по Минску</label>
+                    <input type="radio" name="ship" id="rad3"><label for="rad3">Доставка по Беларуси</label>
+                </p>
+                <h2>СПОСОБ ОПЛАТЫ</h2>
+                <p>
+                    <input type="radio" name="pay" id="pay1" name="pay1" checked><label for="pay1">Наличные</label>
+                    <input type="radio" name="pay" id="pay2"><label for="pay2">По карте</label>
+                </p>
+                <h2>ДОПОЛНИТЕЛЬНО</h2>
+                <input type="text" id="add" placeholder="Комментарий к заказу" style="width: 98%; min-height: 200px; margin-top: 20px">
+            </form>
+        </div>
+        <div style="grid-area: a2;">
+            <table>
+                <tr>
+                    <th>Ваш заказ</th>
+                    <th>Количество</th>
+                    <th>Цена</th>
+                </tr>
+                <tr>
+                    <td style="display: flex; justify-content: center; align-items: center; font-size: 1.5vw;">
+                        <img src="/images/catalog/airpods-pro.jpg">
+                        <h3 style="display: inline-block;">Airpods Pro</h3>
+                    </td>
+                    <td>
+                        <div id="counter" style="display: flex; justify-content: space-between;">
+                            <input type="button" id="buttonCountMinus" value="-">
+                            <div id="buttonCountNumber">1</div>
+                            <input type="button" id="buttonCountPlus" value="+">
+                        </div>
+                    </td>
+                    <td>
+                        $249
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <h4 style="display: inline-block;">Итого:</h4> <div id="calculation" style="text-align: center; display: inline-block;">$249</div>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <form class="promos" id="form2">
+                    <h2>Введите промокод</h2>
+                    <p>
+                        <input type="text" id="name" style="width: 60%;">
+                        <button type="reset">ПРИМЕНИТЬ</button>
+                    </p>
+                </form>
+                <form class="promos" id="form3">
+                    <h2>Подарочный сертификат</h2>
+                    <p>
+                        <input type="text" id="name" style="width: 60%;">
+                        <button type="reset">ПРИМЕНИТЬ</button>
+                    </p>    
+                </form>
+            </div>
+            <button form="form1" type="sumbit" class="sumbit-button">Подтвердить заказ</button>
+        </div>
+    </div>
+    <footer>
+        <div style="grid-area: a1">
+            Istat
+            <img src="/images/wifi.png">
+            </div>
+    </footer>
+    <script>
+        let calculation = parseFloat(document.getElementById("calculation").innerHTML.replace('$', ''));
+        let count = document.getElementById("buttonCountNumber");
+
+        document.getElementById("buttonCountPlus").onclick = function() {
+            let countPlus = parseInt(count.innerHTML);
+            if (countPlus <= 9) {
+                count.innerHTML = countPlus + 1;
+                calculateTotal();
+            }
+        }
+
+        document.getElementById("buttonCountMinus").onclick = function() {
+            let countMinus = parseInt(count.innerHTML);
+            if (countMinus >= 2) {
+                count.innerHTML = countMinus - 1;
+                calculateTotal();
+            }
+        }
+
+        function calculateTotal() {
+            let countValue = parseInt(count.innerHTML);
+            let total = countValue * calculation;
+            document.getElementById("calculation").innerHTML = "$" + total;
+        }
+    </script>
+</body>
+</html>

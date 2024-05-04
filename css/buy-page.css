@@ -1,0 +1,239 @@
+@font-face {
+  font-family: Museo;
+  src: url("fonts/Museo500.otf");
+}
+body {
+  margin: 0;
+  font-family: "Museo";
+  min-width: 200px;
+}
+body nav {
+  height: 67px;
+  border-bottom: 2px solid #303039;
+  display: grid;
+  font-weight: 600;
+  font-size: 17px;
+  grid-template-areas: "a1 a2";
+  grid-gap: 0px;
+}
+body nav div[style="grid-area: a1"] {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body nav div {
+  letter-spacing: 1px;
+}
+body nav div[style="grid-area: a1"] {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+@media (max-width: 420px) {
+  body nav {
+    grid-template-columns: 60% 40%;
+  }
+  body nav div[style="grid-area: a2"] #burger {
+    background-color: white;
+    border: 0px;
+    height: 67px;
+    width: 67px;
+    float: right;
+  }
+  body nav div[style="grid-area: a2"] svg {
+    float: right;
+  }
+}
+@media (min-width: 421px) and (max-width: 1000px) {
+  body nav {
+    grid-template-columns: 60% 40%;
+  }
+  body nav div[style="grid-area: a2"] #burger {
+    background-color: white;
+    border: 0px;
+    height: 67px;
+    width: 67px;
+    float: right;
+  }
+  body nav div[style="grid-area: a2"] svg {
+    float: right;
+  }
+}
+@media (min-width: 1001px) {
+  body nav {
+    grid-template-columns: 25% 75%;
+  }
+  body nav div[style="grid-area: a2"] #burger {
+    display: none;
+  }
+  body nav ul {
+    text-align: right;
+    display: flex !important;
+    height: 100%;
+    margin-top: 0;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+  }
+  body nav ul a {
+    display: inline-block;
+    margin-left: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #303039;
+    height: 25px;
+    padding: 10px;
+    transition: 0.2s;
+  }
+  body nav ul a:hover {
+    background-color: #4800E2;
+    color: white;
+    transform: scale(1.1);
+  }
+}
+
+img[src="/images/wifi.png"] {
+  width: 22px;
+  margin-left: -5px;
+}
+
+#main {
+  display: grid;
+  margin: 20px;
+  grid-template-areas: "a1 a2";
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap: 20px;
+}
+#main div[style="grid-area: a1;"] {
+  grid-column-start: 1;
+  padding: 20px;
+  background-color: #EEEEEE;
+  border-radius: 20px;
+}
+#main div[style="grid-area: a2;"] {
+  grid-column-start: 2;
+  padding: 20px;
+  height: 100%;
+}
+#main div[style="grid-area: a2;"] table {
+  margin-top: 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+#main div[style="grid-area: a2;"] table th {
+  text-align: center;
+  height: 70px;
+  font-size: 1.8vw;
+  border-bottom: 3px solid #EEEEEE;
+  border-top: 3px solid #EEEEEE;
+}
+#main div[style="grid-area: a2;"] table td {
+  padding: 10px 20px 10px 20px;
+  border-bottom: 3px solid #EEEEEE;
+  font-size: 2vw;
+}
+#main div[style="grid-area: a2;"] table img[src="/images/catalog/airpods-pro.jpg"] {
+  width: 10vw;
+}
+#main div[style="grid-area: a2;"] table #buttonCountPlus, #main div[style="grid-area: a2;"] table #buttonCountMinus {
+  border-radius: 50%;
+  border: none;
+  width: 2.5vw;
+  height: 2.5vw;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#main div[style="grid-area: a2;"] table #buttonCountPlus:active, #main div[style="grid-area: a2;"] table #buttonCountMinus:active {
+  transform: scale(1.4);
+}
+#main div[style="grid-area: a2;"] .sumbit-button {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  height: 45px;
+  margin-top: 30px;
+  border-radius: 20px;
+  border: none;
+  background-color: #4800E2;
+  color: white;
+  font-family: "Museo";
+  transition: 0.3s;
+  box-shadow: 0px 3px 5px 0px rgba(72, 0, 226, 0.65);
+}
+#main div[style="grid-area: a2;"] .sumbit-button:hover {
+  transform: scale(1.05);
+}
+#main .promos {
+  padding: 10px;
+}
+#main .promos input {
+  background-color: #EEEEEE;
+}
+#main .promos p button {
+  border-radius: 20px;
+  width: 35%;
+  border: none;
+  font-family: "Museo";
+  color: white;
+  background: linear-gradient(to right, #4800E2, black);
+  cursor: pointer;
+  box-shadow: 0px 3px 5px 0px rgba(72, 0, 226, 0.65);
+  transition: 0.1s;
+}
+#main .promos p button:active {
+  background: linear-gradient(to left, #4800E2, black);
+}
+#main .promos p button:hover {
+  transform: scale(1.05);
+}
+#main h2 {
+  margin: 10px 0px 0px 10px;
+}
+#main form p:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#main form p:nth-child(2) input {
+  display: block;
+}
+#main form p:nth-child(6), #main form p:nth-child(8) {
+  display: flex;
+  align-items: center;
+  font-size: 1.2vw;
+}
+#main form p:nth-child(6) label, #main form p:nth-child(8) label {
+  margin-right: 30px;
+}
+#main form input {
+  border: none;
+  height: 35px;
+  border-radius: 20px;
+  padding: 5px;
+  font-family: "Museo";
+  transition: 0.1s;
+}
+#main form input[type=text]:focus, #main form input[type=email]:focus, #main form input[type=tel]:focus {
+  outline: 3px solid #4800E2;
+}
+
+footer {
+  display: grid;
+  font-weight: 600;
+  font-size: 17px;
+  grid-template-areas: "a1 a2";
+  grid-gap: 0px;
+  border-top: 2px solid #303039;
+  margin-bottom: 10px;
+}
+footer div {
+  letter-spacing: 1px;
+}
+footer div[style="grid-area: a1"] {
+  padding-top: 20px;
+  padding-left: 30px;
+}/*# sourceMappingURL=buy-page.css.map */

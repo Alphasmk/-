@@ -1,0 +1,267 @@
+$main-color: #4800E2;
+$border-color: #303039;
+$img-height: 180px;
+$first-img-width: 270px;
+$border-radius: 20px;
+$grey: #EEEEEE;
+
+@font-face{
+    font-family: Museo;
+    src:
+        url("fonts/Museo500.otf");
+}
+
+@mixin nav{
+    display: grid;
+        font-weight: 600;
+        font-size: 17px;
+        grid-template-areas:
+        "a1 a2";
+        grid-gap: 0px;
+        div{
+            letter-spacing: 1px;
+        }
+        div[style="grid-area: a1"]
+        {
+            padding-top: 20px;
+            padding-left: 30px;
+        }
+}
+
+body{
+    margin: 0;
+    font-family: "Museo";
+    min-width: 200px;
+    nav{
+        height: 67px;
+        border-bottom: 2px solid $border-color;
+        div[style="grid-area: a1"]
+        {
+            cursor: default;
+            user-select: none;
+        }
+        @include nav();
+        @media (max-width: 420px)
+        {
+            div[style="grid-area: a2"]
+            {
+                #burger{
+                    background-color: white;
+                    border: 0px;
+                    height: 67px;
+                    width: 67px;
+                    float: right;
+                }
+                svg{
+                    float: right;
+                }
+            }
+            grid-template-columns: 60% 40%;
+        }
+
+        @media (min-width: 421px) and (max-width: 1000px)
+        {
+            div[style="grid-area: a2"]
+            {
+                #burger{
+                    background-color: white;
+                    border: 0px;
+                    height: 67px;
+                    width: 67px;
+                    float: right;
+                }
+                svg{
+                    float: right;
+                }
+            }
+            grid-template-columns: 60% 40%;
+        }
+
+        @media (min-width: 1001px)
+        {
+            div[style="grid-area: a2"]
+            {
+                #burger{
+                    display: none;
+                }
+            } 
+            grid-template-columns: 25% 75%;
+            ul{
+                text-align: right;
+                display: flex !important;
+                height: 100%;
+                margin-top: 0;
+                margin-right: 20px;
+                flex-wrap: wrap;
+                justify-content: right;
+                align-items: center;
+                a{
+                    display: inline-block;
+                    margin-left: 8px;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    color: $border-color;
+                    height: 25px;
+                    padding: 10px;
+                    transition: 0.2s;
+                    &:hover{
+                        background-color: $main-color;
+                        color: white;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+img[src="/images/wifi.png"]{
+    width: 22px;
+    margin-left: -5px;
+}
+
+#main{
+    display: grid;
+    margin: 20px;
+    grid-template-areas: "a1 a2";
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 20px;
+    div[style="grid-area: a1;"]
+    {
+        grid-column-start: 1;
+        padding: 20px;
+        background-color: #EEEEEE;
+        border-radius: 20px;
+    }
+
+    div[style="grid-area: a2;"]
+    {
+        grid-column-start: 2;
+        padding: 20px;
+        height: 100%;
+        table{
+            margin-top: 0;
+            width: 100%;
+            border-collapse: collapse;
+            th{
+                text-align: center;
+                height: 70px;
+                font-size: 1.8vw;
+                border-bottom: 3px solid $grey;
+                border-top: 3px solid $grey;
+            }
+
+            td{
+                padding: 10px 20px 10px 20px; 
+                border-bottom: 3px solid $grey;
+                font-size: 2vw;
+            }
+
+            img[src="/images/catalog/airpods-pro.jpg"]{
+                width: 10vw;
+            }
+
+            #buttonCountPlus, #buttonCountMinus{
+                border-radius: 50%;
+                border: none;
+                width: 2.5vw;
+                height: 2.5vw;
+                cursor: pointer;
+                transition: 0.2s;
+                &:active{
+                    transform: scale(1.4);
+                }
+            }
+        }
+        
+        .sumbit-button{
+            width: 70%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+            height: 45px;
+            margin-top: 30px;
+            border-radius: 20px;
+            border: none;
+            background-color: $main-color;
+            color: white;
+            font-family: 'Museo';
+            transition: 0.3s;
+            box-shadow: 0px 3px 5px 0px rgba(72,  0,  226, 0.65);
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .promos{
+        padding: 10px;
+        input{
+            background-color: $grey;
+        }
+        p{
+            button{
+                border-radius: 20px;
+                width: 35%;
+                border: none;
+                font-family: 'Museo';
+                color: white;
+                background: linear-gradient(to right, $main-color, black);
+                cursor: pointer;
+                box-shadow: 0px 3px 5px 0px rgba(72,  0,  226, 0.65);
+                transition: 0.1s;
+                &:active{
+                    background: linear-gradient(to left, $main-color, black);
+                }
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    h2{
+        margin: 10px 0px 0px 10px;
+    }
+
+    form{
+        p:nth-child(2){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            input{
+                display: block;
+            }
+        }
+        
+        p:nth-child(6), p:nth-child(8){
+            display: flex;
+            align-items: center;
+            font-size: 1.2vw;
+            label{
+                margin-right: 30px;
+            }
+        }
+
+        input{
+            border: none;
+            height: 35px;
+            border-radius: 20px;
+            padding: 5px;
+            font-family: 'Museo';
+            transition: 0.1s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus{
+            outline: 3px solid $main-color;
+        }
+    }
+}
+
+footer{
+    @include nav();
+    border-top: 2px solid $border-color;
+    margin-bottom: 10px;
+}
