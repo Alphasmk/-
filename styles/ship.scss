@@ -146,115 +146,62 @@ img[src="/images/wifi.png"]{
     color: white;
 }
 
-
-#link{
-    background-color: $grey;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    border-radius: 1.5vw;
-    padding: 2%;
-    @media(min-width: 421px) and (max-width: 1000px){
-        width: 70%;
-        border-radius: 2vw;
+#zones{
+    display: grid;
+    grid-template-areas:
+    "a1 a2";
+    grid-template-columns: 1fr 1fr;
+    margin: 0.5vw 10vw 0.5vw 10vw;
+    grid-gap: 1vw;
+    @media(max-width: 1000px){
+        grid-template-areas:
+        "a1"
+        "a2";
+        grid-template-columns: 1fr;
     }
-    @media(max-width: 420px){
-        width: 90%;
-        border-radius: 3vw;
-        padding: 3%;
-    }
-    input{
-        display: block;
-        height: 3vw;
+    div{
+        background-color: $grey;
+        text-align: center;
         border-radius: 1vw;
-        border: none;
-        display: inline-block;
-        font-family: "Museo";
-        transition: 0.1s;
-        @media(min-width: 421px) and (max-width: 1000px){
-            height: 5.5vw;
-            border-radius: 1.5vw;
+        padding: 1vw;
+        .date{
+            display: inline-block;
+            padding: 0.5vw;
+            border-radius: 0.5vw;
+            display: flex;
+            align-items: center;
         }
-        @media(max-width: 420px){
-            height: 12vw;
-            border-radius: 3vw;
+        .date-white{
+            background-color: white;
         }
-    }
-
-    input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus{
-        outline: 3px solid $main-color;
-    }
-
-    p:nth-child(1){
-        display: flex;
-        justify-content: space-between;
-        @media(max-width: 800px) and (min-width: 421px){
-            display: block;
-            input{
-                width: 99.5% !important;
-                margin-top: 20px;
-            }
+        .date-green{
+            background-color: #00cc00;
+            color: white;
         }
-        @media(max-width: 420px){
-            display: block;
-            input{
-                width: 99.5% !important;
-                margin-top: 20px;
-            }
-        }
-    }
-
-    textarea{
-        width: 96%;
-        height: 200px;
-        border-radius: 1.5vw;
-        border: none;
-        padding: 2%;
-        transition: 0.1s;
-        font-family: "Museo";
-    }
-
-    button[type="sumbit"]{
-        border-radius: 20px;
-        width: 35%;
-        border: none;
-        font-family: 'Museo';
-        color: white;
-        background: linear-gradient(to right, $main-color, black);
-        cursor: pointer;
-        box-shadow: 0px 3px 5px 0px rgba(72,  0,  226, 0.65);
-        transition: 0.1s;
-        &:active{
-            background: linear-gradient(to left, $main-color, black);
-        }
-        &:hover{
-            transform: scale(1.05);
-        }
-        height: 3vw;
-        margin-top: 1vw;
-        margin-right: auto;
-        margin-left: auto;
-        display: block;
-        @media(min-width: 421px) and (max-width: 1000px){
-            height: 5vw;
-            width: 50%;
-        }
-        @media(max-width: 800px) and (min-width: 421px){
-            height: 6.5vw;
-            width: 50%;
-        }
-        @media(max-width: 420px){
-            height: 14vw;
-            width: 80%;
-            font-size: 4vw;
+        .block{
+            display: flex;
+            justify-content: center;
+            grid-gap: 1vw;
+            margin-top: auto;
+            margin-bottom: auto;
         }
     }
 }
 
+#ship{
+    margin: 1vw;
+    display: grid;
+    grid-template-areas: "a1 a2";
+    grid-template-columns: 1fr 1fr;
+    line-height: 2.5vw;
+    grid-gap: 1vw;
+    @media(max-width: 700px){
+        line-height: 5vw;
+    }
+}
+
 footer{
-    @include nav();
+    @include nav;
     border-top: 2px solid $border-color;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    height: 67px;
 }

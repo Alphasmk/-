@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="css/ship.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div style="grid-area: a1">
+        Istat
+        <img src="/images/wifi.png">
+        </div>
+        <div style="grid-area: a2">
+            <button id="burger" href="javascript:void(0)" onclick="myFunction()">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="67" height="67">
+                    <line x1="14" y1="27" x2="38" y2="27" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="14" y1="35" x2="38" y2="35" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="14" y1="43" x2="38" y2="43" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <ul style="display: none;">
+                <a href="/index.html">Главная</a>
+                <a href="/catalog.html">Каталог</a>
+                <a href="ship.html">Доставка и оплата</a>
+                <a href="#">О Нас</a>
+                <a href="#">Контакты</a>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="burger-menu" style="height: auto;">
+        <div class="topnav">
+            <div id="myLinks">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="ship.html">Доставка и оплата</a>
+                <a href="#">О Нас</a>
+                <a href="#">Контакты</a>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="text-align: center;">Доставка</h1>
+    <div id="zones">
+        <div style="grid-area: a1">
+            <h2>Обработка заказов</h2>
+            <div class="block">
+                <span class="date date-white">9:00 - 20:00</span>
+                <span class="date date-green">Пн</span>
+                <span class="date date-green">Вт</span>
+                <span class="date date-green">Ср</span>
+                <span class="date date-green">Чт</span>
+                <span class="date date-green">Пт</span>
+                <span class="date date-green">Сб</span>
+                <span class="date date-green">Вс</span>
+            </div>
+        </div>
+        <div style="grid-area: a2">
+            <h2>Доставка заказов</h2>
+            <div class="block">
+                <span class="date date-white">11:00 - 20:00</span>
+                <span class="date date-green">Пн</span>
+                <span class="date date-green">Вт</span>
+                <span class="date date-green">Ср</span>
+                <span class="date date-green">Чт</span>
+                <span class="date date-green">Пт</span>
+                <span class="date date-green">Сб</span>
+                <span class="date date-green">Вс</span>
+            </div>
+        </div>
+    </div>
+    <div id="pay" style="text-align: center;">
+        <h1 style="text-align: center;">Способы доставки и оплаты</h1>
+        <h3>Наш магазин принимает оплату наличными, картой и через ЕРИП.</br>
+        Также в нашем магазине есть различные варианты доставки товара: Самовывоз, Доставка курьером по Беларуси, Доставка курьером по Минску.</h3>
+    </div>
+    <h1 style="text-align: center;">Подробнее про доставку</h1>
+    <div id="ship" style="text-align: center;">
+        <div style="grid-area: a1;">
+            <h2>Доставка по Минску</h2>
+            Сроки доставки - в течение 1-3 часов.</br>
+            Время доставки: Пн-Вс: c 11.00 до 22.00. Без выходных! 7 дней в неделю.</br>
+            Минимальная сумма заказа для доставки - 50 рублей.</br>
+            Заказы общей стоимостью менее 50 руб. доставке не подлежат, их приобрести можно только в магазине iStat.</br>
+            Доставка товаров до пункта выдачи осуществляется БЕСПЛАТНО.
+        </div>
+        <div style="grid-area: a2;">
+            <h2>Доставка по Беларуси</h2>
+            Бесплатная доставка по Беларуси при сумме заказа от 300 рублей!</br>
+            Доставим товары по Беларуси на завтра!</br>
+            Стоимость доставки товаров стоимостью до 300 рублей - от 5 рублей.</br>
+            Доставка товаров по Беларуси курьерской службой производится 7 раз в неделю, непосредственно до двери заказчика.</br>
+        </div>
+    </div>
+    <footer>
+        <div style="grid-area: a1">
+            Istat
+            <img src="/images/wifi.png">
+            </div>
+    </footer>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myLinks");
+         if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
