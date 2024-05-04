@@ -1,0 +1,261 @@
+@font-face {
+  font-family: Museo;
+  src: url("fonts/Museo500.otf");
+}
+body {
+  margin: 0;
+  font-family: "Museo";
+  min-width: 200px;
+}
+body nav {
+  height: 67px;
+  border-bottom: 2px solid #303039;
+  display: grid;
+  font-weight: 600;
+  font-size: 17px;
+  grid-template-areas: "a1 a2";
+  grid-gap: 0px;
+}
+body nav div[style="grid-area: a1"] {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body nav div {
+  letter-spacing: 1px;
+}
+body nav div[style="grid-area: a1"] {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+@media (max-width: 420px) {
+  body nav {
+    grid-template-columns: 60% 40%;
+  }
+  body nav div[style="grid-area: a2"] #burger {
+    background-color: white;
+    border: 0px;
+    height: 67px;
+    width: 67px;
+    float: right;
+  }
+  body nav div[style="grid-area: a2"] svg {
+    float: right;
+  }
+}
+@media (min-width: 421px) and (max-width: 1000px) {
+  body nav {
+    grid-template-columns: 60% 40%;
+  }
+  body nav div[style="grid-area: a2"] #burger {
+    background-color: white;
+    border: 0px;
+    height: 67px;
+    width: 67px;
+    float: right;
+  }
+  body nav div[style="grid-area: a2"] svg {
+    float: right;
+  }
+}
+@media (min-width: 1001px) {
+  body nav {
+    grid-template-columns: 25% 75%;
+  }
+  body nav div[style="grid-area: a2"] #burger {
+    display: none;
+  }
+  body nav ul {
+    text-align: right;
+    display: flex !important;
+    height: 100%;
+    margin-top: 0;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+  }
+  body nav ul a {
+    display: inline-block;
+    margin-left: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #303039;
+    height: 25px;
+    padding: 10px;
+    transition: 0.2s;
+  }
+  body nav ul a:hover {
+    background-color: #4800E2;
+    color: white;
+    transform: scale(1.1);
+  }
+}
+
+img[src="/images/wifi.png"] {
+  width: 22px;
+  margin-left: -5px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #4800E2;
+  position: relative;
+}
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#link {
+  background-color: #EEEEEE;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  border-radius: 1.5vw;
+  padding: 2%;
+}
+@media (min-width: 421px) and (max-width: 1000px) {
+  #link {
+    width: 70%;
+    border-radius: 2vw;
+  }
+}
+@media (max-width: 420px) {
+  #link {
+    width: 90%;
+    border-radius: 3vw;
+    padding: 3%;
+  }
+}
+#link input {
+  display: block;
+  height: 3vw;
+  border-radius: 1vw;
+  border: none;
+  display: inline-block;
+  font-family: "Museo";
+  transition: 0.1s;
+}
+@media (min-width: 421px) and (max-width: 1000px) {
+  #link input {
+    height: 5.5vw;
+    border-radius: 1.5vw;
+  }
+}
+@media (max-width: 420px) {
+  #link input {
+    height: 12vw;
+    border-radius: 3vw;
+  }
+}
+#link input[type=text]:focus, #link input[type=email]:focus, #link input[type=tel]:focus, #link textarea:focus {
+  outline: 3px solid #4800E2;
+}
+#link p:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 800px) and (min-width: 421px) {
+  #link p:nth-child(1) {
+    display: block;
+  }
+  #link p:nth-child(1) input {
+    width: 99.5% !important;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 420px) {
+  #link p:nth-child(1) {
+    display: block;
+  }
+  #link p:nth-child(1) input {
+    width: 99.5% !important;
+    margin-top: 20px;
+  }
+}
+#link textarea {
+  width: 96%;
+  height: 200px;
+  border-radius: 1.5vw;
+  border: none;
+  padding: 2%;
+  transition: 0.1s;
+  font-family: "Museo";
+}
+#link button[type=sumbit] {
+  border-radius: 20px;
+  width: 35%;
+  border: none;
+  font-family: "Museo";
+  color: white;
+  background: linear-gradient(to right, #4800E2, black);
+  cursor: pointer;
+  box-shadow: 0px 3px 5px 0px rgba(72, 0, 226, 0.65);
+  transition: 0.1s;
+  height: 3vw;
+  margin-top: 1vw;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+#link button[type=sumbit]:active {
+  background: linear-gradient(to left, #4800E2, black);
+}
+#link button[type=sumbit]:hover {
+  transform: scale(1.05);
+}
+@media (min-width: 421px) and (max-width: 1000px) {
+  #link button[type=sumbit] {
+    height: 5vw;
+    width: 50%;
+  }
+}
+@media (max-width: 800px) and (min-width: 421px) {
+  #link button[type=sumbit] {
+    height: 6.5vw;
+    width: 50%;
+  }
+}
+@media (max-width: 420px) {
+  #link button[type=sumbit] {
+    height: 14vw;
+    width: 80%;
+  }
+}
+
+footer {
+  display: grid;
+  font-weight: 600;
+  font-size: 17px;
+  grid-template-areas: "a1 a2";
+  grid-gap: 0px;
+  border-top: 2px solid #303039;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+footer div {
+  letter-spacing: 1px;
+}
+footer div[style="grid-area: a1"] {
+  padding-top: 20px;
+  padding-left: 30px;
+}/*# sourceMappingURL=link.css.map */

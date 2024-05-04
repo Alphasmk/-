@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="css/link.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div style="grid-area: a1">
+        Istat
+        <img src="/images/wifi.png">
+        </div>
+        <div style="grid-area: a2">
+            <button id="burger" href="javascript:void(0)" onclick="myFunction()">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="67" height="67">
+                    <line x1="14" y1="27" x2="38" y2="27" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="14" y1="35" x2="38" y2="35" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="14" y1="43" x2="38" y2="43" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <ul style="display: none;">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="#">Доставка и оплата</a>
+                <a href="#">О Нас</a>
+                <a href="#">Контакты</a>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="burger-menu" style="height: auto;">
+        <div class="topnav">
+            <div id="myLinks">
+                <a href="/index.html">Главная</a>
+                <a href="/catalog.html">Каталог</a>
+                <a href="#">Доставка и оплата</a>
+                <a href="#">О Нас</a>
+                <a href="#">Контакты</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="link">
+        <h1>Форма обратной связи</h1>
+        <form>
+            <p>
+                <input type="text" placeholder="*Имя" required style="width: 45%;">
+                <input type="text" id="secondname" required placeholder="*Фамилия" style="width: 45%;">
+            </p>
+            <p>
+                <input type="tel" placeholder="*Номер телефона" required style="width: 99.5%;">
+            </p>
+            <p>
+                <input type="email" placeholder="E-Mail" style="width: 99.5%;">
+            </p>
+            <textarea style="resize: none" placeholder="Опишите вашу проблему"></textarea>
+            <button type="sumbit">Отправить</button>
+        </form>
+    </div>
+    <footer>
+        <div style="grid-area: a1">
+            Istat
+            <img src="/images/wifi.png">
+            </div>
+    </footer>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myLinks");
+         if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
