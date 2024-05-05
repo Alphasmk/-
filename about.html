@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="css/about.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div style="grid-area: a1">
+        Istat
+        <img src="/images/wifi.png">
+        </div>
+        <div style="grid-area: a2">
+            <button id="burger" href="javascript:void(0)" onclick="myFunction()">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="67" height="67">
+                    <line x1="14" y1="27" x2="38" y2="27" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="14" y1="35" x2="38" y2="35" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="14" y1="43" x2="38" y2="43" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <ul style="display: none;">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="ship.html">Доставка и оплата</a>
+                <a href="about.html">О Нас</a>
+                <a href="contacts.html">Контакты</a>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="burger-menu" style="height: auto;">
+        <div class="topnav">
+            <div id="myLinks">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="ship.html">Доставка и оплата</a>
+                <a href="about.html">О Нас</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <h2>Добро пожаловать в наш интернет-магазин аудио- и видео-техники!</h2></br>
+        
+        Мы рады предложить вам широкий выбор качественной техники для вашего домашнего развлечения. В нашем ассортименте вы найдете все необходимое для создания уютного домашнего кинотеатра, насыщенной музыкальной атмосферы и качественного звука.</br></br>
+
+        Откройте для себя лучшие модели акустических систем, наушников, усилителей, проигрывателей винила, мультимедийных проекторов, телевизоров, а также аксессуаров для аудио- и видео-техники.</br></br>
+        
+        Мы работаем только с проверенными производителями, чтобы гарантировать вам высокое качество и надежность продукции.</br></br>
+
+        Наша команда экспертов всегда готова помочь вам подобрать идеальное оборудование для ваших потребностей и бюджета. Мы стремимся обеспечить вас лучшим обслуживанием, быстрой доставкой и удобными способами оплаты.</br></br>
+
+        Погрузитесь в мир качественного звука и захватывающих видеоэффектов с нашим интернет-магазином аудио- и видео-техники. Создайте свой собственный домашний кинотеатр или наслаждайтесь музыкой высокого качества — мы поможем вам воплотить ваши аудиовизуальные мечты в реальность.</br></br>
+    </div>
+    <footer>
+        <div style="grid-area: a1">
+            Istat
+            <img src="/images/wifi.png">
+            </div>
+    </footer>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myLinks");
+         if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
