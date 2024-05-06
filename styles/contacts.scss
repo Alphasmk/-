@@ -162,7 +162,13 @@ img[src="/images/wifi.png"]{
         list-style-type: none;
         padding-inline-start: 0;
         img{
-            width: 3vw;
+            width: 5vw;
+            @media(max-width: 1000px) and (min-width: 421px){
+                width: 6vw;
+            }
+            @media(max-width: 420px){
+                width: 8vw;
+            }
         }
         li{
             text-decoration: none;

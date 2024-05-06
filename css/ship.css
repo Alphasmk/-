@@ -170,8 +170,8 @@ img[src="/images/wifi.png"] {
   display: grid;
   grid-template-areas: "a1 a2";
   grid-template-columns: 1fr 1fr;
-  line-height: 2.5vw;
-  grid-gap: 1vw;
+  line-height: 2.2vw;
+  grid-gap: 2vw;
 }
 @media (max-width: 700px) {
   #ship {

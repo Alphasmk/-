@@ -146,7 +146,17 @@ img[src="/images/wifi.png"] {
   padding-inline-start: 0;
 }
 #main ul img {
-  width: 3vw;
+  width: 5vw;
+}
+@media (max-width: 1000px) and (min-width: 421px) {
+  #main ul img {
+    width: 6vw;
+  }
+}
+@media (max-width: 420px) {
+  #main ul img {
+    width: 8vw;
+  }
 }
 #main ul li {
   text-decoration: none;
